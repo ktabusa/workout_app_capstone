@@ -1,6 +1,6 @@
 <!-- Here is My Capstone Proposal -->
 
-# **-- Workout Timer App -- **
+# Workout Timer App
 
 
 ## Project Overview
@@ -43,16 +43,16 @@ Additional features to track last workout completion, all dates complete, and nu
 
 ## Data Model
 <!-- Custom user model functionality needs to be included at the beginning! -->
-'User'
-- 'Workouts'
+**User**
+- Workouts
 
-'Workouts'
-- 'Exercises'
-- 'Set time / Reps'
-- 'Completion counter'
-- 'Date last completed'
-- 'Dates completed'
-- 'Weights used'
+**Workouts**
+- Exercises
+- Set time / Reps
+- Completion counter
+- Date last completed
+- Dates completed
+- Weights used
 
 
 ## Schedule

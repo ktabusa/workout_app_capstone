@@ -22,9 +22,11 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('workout_capstone_app.urls')),
-    path("", TemplateView.as_view(template_name="home.html"), name="home"),
-    path("accounts/", include("accounts.urls")),
-    path("accounts/", include("django.contrib.auth.urls")),
-    # for serializers
+    path('', TemplateView.as_view(template_name="home.html"), name="home"),
+    path('accounts/', include("accounts.urls")),
+    path('accounts/', include("django.contrib.auth.urls")),
+    # for api serializers
     path('api/v1/', include('apis.urls')),
+    # this is specifically for django tool additions
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

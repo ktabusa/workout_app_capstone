@@ -3,12 +3,17 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a> |
-  <a href="{% url 'signup' %}">Sign Up</a>
-{% endif %}
+  
+  <h4>the home.html page is loading</h4>
+  <div id='workouts'>
+    <h2>Here are all of the default workouts</h2>
+    <ul>
+      <li v-for="workout in apiResponse" :key="workout.id">
+        <h3>[[workout.title]]</h3>
+        <h3>[[workout.description]]</h3>
+        <h3>add hyperlink to the workout detail page</h3>
+      </li>
+    </ul>
+  </div>
+
 {% endblock %}

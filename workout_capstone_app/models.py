@@ -23,4 +23,4 @@ class Exercise(models.Model):
     # workout = models.ForeignKey will assign it to only a single workout to keep each exercise instance intact 
 
     def __str__(self):
-        return self.title
+        return self.title   

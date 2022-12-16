@@ -29,4 +29,7 @@ urlpatterns = [
     path('api/v1/', include('apis.urls')),
     # this is specifically for django tool additions
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    # need a path for 'workouts' and     path('workouts/<int:workout_id', views.workout, name='workout') -- testing below
+    path('workouts/', include('workout_capstone_app.urls'))
+
 ]

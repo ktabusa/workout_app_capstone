@@ -6,3 +6,9 @@ from django.http import HttpResponse
 
 def index(request):
     return HttpResponse('Django Connected')
+    # this will be a placeholder page that we won't use for now?
+
+
+def workout(request, workout_id):
+    # passing in the workout_id to the template itself, which makes it usable in the template
+    return render(request, 'workout.html', {'workout_id': workout_id})

@@ -13,6 +13,6 @@ from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'workouts', WorkoutViewSet, basename='workouts')
-router.register(r'exercises', ExerciseViewset, basename='exercises')
+router.register(r'exercise', ExerciseViewset, basename='exercises')
 urlpatterns = router.urls
 

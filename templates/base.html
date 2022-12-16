@@ -44,6 +44,8 @@ integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG
             workouts: [],
             exercises: [],
             apiResponse: [],
+            workout_id: null,
+            workoutResponse: [],
           },
           methods: {
             logMessage: function () {
@@ -61,9 +63,25 @@ integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG
                     console.log(error.response)
                 })
             },
+
+            loadWorkoutDetail: function () {
+                axios({
+                    method: 'GET',
+                    // used backtickets below because of the ${} syntax(similar to fstrings)
+                    url: `/api/v1/workouts/${this.workout_id}`,
+                }).then(response => {
+                    this.workoutResponse = response.data
+                    console.log(response.data)
+                })
+            }
           },
           mounted: function () {
             this.loadWorkouts();
+            let workoutIdElement = document.getElementById('workout_id')
+            if (workoutIdElement) {
+                this.workout_id = workoutIdElement.value
+                this.loadWorkoutDetail()
+            }
           }
         });
     </script>

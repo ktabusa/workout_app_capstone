@@ -39,3 +39,4 @@ class ExerciseSerializer(serializers.ModelSerializer):
             'workout'
         )
         model = models.Exercise
+

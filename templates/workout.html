@@ -4,18 +4,29 @@
 
 {% block content %}
   
-  <h4>the workout.html page is loading</h4>
+  {% comment %} <h4>the workout.html page is loading</h4> {% endcomment %}
   <div id='workout-detail'>
 {% comment %} This hidden type tag below is used so we can access the variable from the vue app in our other page {% endcomment %}
     <input type="hidden" value="{{ workout_id }}" id='workout_id'>
     <h2>[[workoutResponse.title]]</h2>
-    <h3>Exercises</h3>
+    <h3><em>Exercises</em></h3>
     <ul>
       <li v-for="item in workoutResponse.nested_exercises" :key="item.id">
         <h3>[[item.title]]</h3>
-        <h3>[[item.duration]] seconds</h3>
+        <h4>[[item.duration]] seconds</h4>
       </li>
     </ul>
+    <p id='countdown'>Countdown Timer Placeholder</p>
+       
+
+    {% comment %} may need to pass in javascript variables as: 
+
+    <script type="text/javascript"> 
+        var a = "{{someDjangoVariable}}";
+    </script>
+
+    {% endcomment %}
+    <script src="countdown.js"></script>
   </div>
 
 {% endblock %}

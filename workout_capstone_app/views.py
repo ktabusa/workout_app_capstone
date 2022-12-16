@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('Django Connected')
+    return HttpResponse('Unused Workout Index')
     # this will be a placeholder page that we won't use for now?
 
 

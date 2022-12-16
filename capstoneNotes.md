@@ -21,10 +21,26 @@ user can only edit their own workout instances so the base workout data isn't ch
 
 For creating viewsets: Need to have a serializer, then we update the api views.py with the viewset, and then we update the api urls with the urlpatters.
 
+Done: need to add a workout detail page
 
-ACTION - need to add a workout detail page / workout start page
+ACTION - workout start page
+BUG - workout page number isn't dynamic in home.html
 
+ACTION - need to add workout add functionality and admin / owner functionality
 
-Optional adds 
+Required adds:
+- workout timer functionality in JS with the ability to take in the django variables from the workout objects
+- workout rounds
+- CRUD functionality for workouts
 - needs to add owner functionality
+
+Optional adds:
 - Can add workout classes for rest/work to have a different display?
+- search workout functionality by keywords / types
+- visualization
+- click and drag
+- hover over an exercise to show the description without clicking on it
+- top navbar
+
+Lessons Learned:
+taking some of the problems a step at a time and working slowly

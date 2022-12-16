@@ -4,16 +4,18 @@
 
 {% block content %}
   
-  <h4>the home.html page is loading</h4>
+  {% comment %} <h4>the home.html page is loading</h4> {% endcomment %}
   <div id='workouts'>
-    <h2>Here are all of the default workouts</h2>
+    <h2>Here are all of the default workouts:</h2>
     <ul>
       <li v-for="workout in apiResponse" :key="workout.id">
         <h3>[[workout.title]]</h3>
         <h3>[[workout.description]]</h3>
-        <h3>add hyperlink to the workout detail page</h3>
+        {% comment %} used back ticks here to use the JS string notation, needs the vbind {% endcomment %}
+        <a v-bind:href="`../workouts/${workout.id}`">Workout Detail</a>
       </li>
     </ul>
   </div>
+  <div id='user-workouts'><h2>Here are all of your workouts {{user.username}}:</h2></div>
 
 {% endblock %}

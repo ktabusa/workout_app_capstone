@@ -24,7 +24,7 @@ For creating viewsets: Need to have a serializer, then we update the api views.p
 Done: need to add a workout detail page
 
 ACTION - workout start page
-BUG - workout page number isn't dynamic in home.html
+BUG - fixed workout page number isn't dynamic in home.html
 
 ACTION - need to add workout add functionality and admin / owner functionality
 

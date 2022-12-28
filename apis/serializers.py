@@ -17,7 +17,9 @@ class NextedExerciseSerializer(serializers.ModelSerializer):
 
 
 class WorkoutSerializer(serializers.ModelSerializer):
-    nested_exercises = NextedExerciseSerializer("nested_exercises", many=True)
+    # needed to add read_only=True to the nested_exercises serializer to allow writing of workouts
+    # note: any of the nested exercises cannot be updated here
+    nested_exercises = NextedExerciseSerializer("nested_exercises", many=True, read_only=True)
 
     class Meta:
         fields = (

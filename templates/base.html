@@ -12,12 +12,12 @@
 <body>
     {% csrf_token %}
        
-    
-        <nav class="navbar navbar-expand-sm fixed-top navbar-dark bg-dark">
+        {% comment %} fixed top navbar will allow the rest of the content to creep up behind it, using stat {% endcomment %}
+        <nav class="navbar navbar-expand-sm static-top navbar-dark bg-dark">
             <div class="container">
                 <a href="#" class="navbar-brand mb-0 h1">
                 <img class="d-inline-block align-top" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="25" height="25"/>
-                    NavBar Title
+                    Workout Capstone
                 </a>
 
                 <button 

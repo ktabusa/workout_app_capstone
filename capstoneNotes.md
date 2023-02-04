@@ -21,7 +21,14 @@ user can only edit their own workout instances so the base workout data isn't ch
 
 For creating viewsets: Need to have a serializer, then we update the api views.py with the viewset, and then we update the api urls with the urlpatters.
 
+
 Done: need to add a workout detail page
+
+
+12/28/2022 
+Completed Navbar setup at the top of the page with bootstrap.
+
+
 
 ACTION - workout start page
 BUG - fixed workout page number isn't dynamic in home.html
